@@ -153,8 +153,6 @@ const checkAnswer = (e) => { // Funktion der tjekker hvilket valg der er trykket
         case 'afrunding4': 
             document.querySelector('#endelig-feedback4').style.display = 'flex';
         break;
-
-    
         
     // Genstart - Hvis du vil spille igen
         case 'restart':
