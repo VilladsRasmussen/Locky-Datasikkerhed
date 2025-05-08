@@ -32,12 +32,6 @@ const checkAnswer = (e) => { // Funktion der tjekker hvilket valg der er trykket
             if (displayElement) {
                 displayElement.textContent = inputValue;
             } // Gemmer det navn du indtastede i inputsfeltet. Viser det også på trin 2.
-
-            if (Math.random() < 1/2000) {
-                document.querySelector('#trin2 .stor-locky').src = 'img/omni-locky.png';
-                document.querySelector('#trin2 h2').textContent = `Are you sure? (Er det dit rigtige navn?)`;
-            } // 1/2000 chance at vise en sjov figur af Locky (Omni-locky) i stedet for normale locky, samt en anden dialog.
-
         break;
 
 
