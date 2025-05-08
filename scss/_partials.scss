@@ -1,0 +1,150 @@
+// INDHOLSFORTEGNELSE 
+
+// 1. VARIABLER .......................... #18
+//    1.1 FARVER ......................... #20
+//    1.2 TYPOGRAFI ...................... #30
+//    1.3 TEKSTSTØRRELSER ................ #38
+//    1.4 MARGINS ........................ #50
+// 2. MIXINS ............................. #54
+//    2.1 FLEXBOX ........................ #56
+//    2.2 KNAPPER ........................ #80
+//    2.3 TALEBOBELER .................... #96
+//    2.4 KONKLUSION ..................... #107
+//        2.4.1 KONKLUSION TEKST ......... #109
+//        2.4.2 KONKLUSION BILLEDE ....... #116
+// 3. RESPONSIVT ......................... #123
+//    3.1 MEDIA QUERIES .................. #125
+
+
+
+// 1. VARIABLER --- Variabler til farver, skrifttyper, størrelser, osv.
+    
+// 1.1. FARVER
+    $baggrundsfarve: #131928;
+    $knap-farve: #FFFFFF;
+    $knap-hover-farve: #555555;
+    $lys-tekstfarve: #F0F0F0;
+    $mørk-tekstfarve: #131928;
+    $korrekt-tekstfarve: #00FF00;
+    $forkert-tekstfarve: #FF0000;
+    $neutral-tekstfarve: #FFFF00;
+
+    // 1.2. TYPOGRAFI
+    .jersey-10-regular {
+        font-family: "Jersey 10", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+    $font: "Jersey 10", sans-serif;
+
+    // 1.3. TEKSTSTØRRELSER
+    html { font-size: 62.5%; } // 1rem = 10px
+
+    $overskrift: 4rem;
+    $knap-tekst: 4rem;
+    $lille-talebobl-tekst: 2.8rem;
+    $stor-talebobl-tekst: 3.5rem;
+    $paragraf-tekst: 2.4rem;
+    $stor-paragraf-tekst: 3.2rem;
+    $konklusion-tekst: 15rem;
+    $konklusion-feedback-tekst: 5rem;
+
+    // 1.4. MARGINS
+    $margin-bottom: 2rem;
+
+
+
+// 2.  MIXINS        // Mixins til forskellige ting
+
+    // 2.1 FLEXBOX
+    @mixin flexbox($direction: column, $justify: center, $align: center) {
+        display: flex;
+        flex-direction: $direction;
+        justify-content: $justify;
+        align-items: $align;
+        gap: 2rem;
+    }
+
+    @mixin dialog-flexbox($direction: row, $justify: center, $align: center) {
+        display: flex;
+        flex-direction: $direction;
+        justify-content: $justify;
+        align-items: $align;
+        gap: 2rem;
+    }
+
+    @mixin lodret-flexbox($direction: column, $align: center) {
+        display: flex;
+        flex-direction: $direction;
+        align-items: $align;
+        gap: 2rem;
+    }
+
+    @mixin button-group($direction: row, $justify: center) {
+        display: flex;
+        flex-direction: $direction;
+        justify-content: $justify;
+        gap: 2rem;
+        flex-wrap: wrap;
+    }
+
+    // 2.2 KNAPPER
+    @mixin knap($farve: $knap-farve, $hover-farve: $knap-hover-farve) {
+        background-color: $farve;
+        color: $mørk-tekstfarve;
+        font-size: $knap-tekst;
+        padding: 1rem 2rem;
+        border-radius: 5px;
+        border: none;
+        width: 300px;
+        display: inline-block;
+        text-decoration: none;
+        text-align: center;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+
+        &:hover {
+            background-color: $hover-farve;
+        }
+    }
+
+    // 2.3 TALEBOBELER
+    @mixin talebobl($farve: $knap-farve, $hover-farve: $knap-hover-farve, $font-size: $lille-talebobl-tekst) {
+        background-color: $farve;
+        font-size: $font-size;
+        color: $mørk-tekstfarve;
+        padding: 1rem 3rem;
+        width: auto;
+        height: 75%;
+        max-width: 300px;
+        max-height: 100%;
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    // 2.4 KONKLUSION --- Indeholder alt styling til ting relateret til konklusioner
+
+        // 2.4.1. Konklusion Tekst
+        @mixin konklusion-tekst($color: $forkert-tekstfarve, $font-size: $konklusion-tekst) {
+            text-align: center;
+            margin: 0;
+            font-size: $font-size;
+            color: $color;
+        }
+
+        // 2.4.2 Konklusion Billede
+        @mixin konklusion-billede($border-color: $forkert-tekstfarve) {
+            min-width: 300px;
+            max-width: 40%;
+            height: auto;
+            border: 5px solid $border-color;
+            border-radius: 10px;
+        }
+
+// 3. RESPONSIVT --- Ting der kun skal påvirkes under bestemste skærmstørrelser
+
+    @media (min-width: 768px) {
+         $overskrift: 5rem;
+    }

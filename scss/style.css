@@ -1,0 +1,268 @@
+@charset "UTF-8";
+.jersey-10-regular {
+  font-family: "Jersey 10", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  transition: background-color 0.5s ease-in-out;
+  background-color: #131928;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  height: 100vh;
+  margin: 0 5% 0 5%;
+}
+
+input {
+  background-color: #FFFFFF;
+  color: #131928;
+  font-size: 2.4rem;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  max-width: 300px;
+  margin-bottom: 2rem;
+  font-size: 2.8rem;
+}
+
+.talebobl {
+  background-color: #FFFFFF;
+  font-size: 2.8rem;
+  color: #131928;
+  padding: 1rem 3rem;
+  width: auto;
+  height: 75%;
+  max-width: 300px;
+  max-height: 100%;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.8rem;
+}
+
+.stor-talebobl {
+  background-color: #FFFFFF;
+  font-size: 2.8rem;
+  color: #131928;
+  padding: 1rem 3rem;
+  width: auto;
+  height: 75%;
+  max-width: 300px;
+  max-height: 100%;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3.5rem;
+}
+
+.dialog {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.lodret {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 30px;
+}
+
+h1, h2, h3, h4, h5, h6, p, span, a, button, input {
+  font-family: "Jersey 10", sans-serif;
+}
+
+.til-venstre > p {
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+h2 {
+  font-size: 4rem;
+  color: #F0F0F0;
+  text-align: center;
+  margin: 0;
+  font-weight: 100;
+}
+
+p {
+  font-size: 2.4rem;
+  color: #F0F0F0;
+  text-align: center;
+  margin: 0;
+}
+
+.dårlig-konklusion-tekst {
+  text-align: center;
+  margin: 0;
+  font-size: 15rem;
+  color: #FF0000;
+}
+
+.god-konklusion-tekst {
+  text-align: center;
+  margin: 0;
+  font-size: 15rem;
+  color: #00FF00;
+}
+
+.neutral-konklusion-tekst {
+  text-align: center;
+  margin: 0;
+  font-size: 15rem;
+  color: #FFFF00;
+}
+
+.konklusion-feedback-tekst {
+  text-align: center;
+  margin: 0;
+  font-size: 5rem;
+  color: #F0F0F0;
+}
+
+.stor-locky {
+  max-width: 30%;
+  height: auto;
+}
+
+.lille-locky {
+  max-width: 15%;
+  min-width: 100px;
+  height: auto;
+}
+
+.scenarie {
+  min-width: 300px;
+  max-width: 40%;
+  height: auto;
+}
+
+.dårlig-slutning-billede {
+  min-width: 300px;
+  max-width: 40%;
+  height: auto;
+  border: 5px solid #FF0000;
+  border-radius: 10px;
+}
+
+.god-slutning-billede {
+  min-width: 300px;
+  max-width: 40%;
+  height: auto;
+  border: 5px solid #00FF00;
+  border-radius: 10px;
+}
+
+.neutral-slutning-billede {
+  min-width: 300px;
+  max-width: 40%;
+  height: auto;
+  border: 5px solid #FFFF00;
+  border-radius: 10px;
+}
+
+button,
+a.knap {
+  background-color: #FFFFFF;
+  color: #131928;
+  font-size: 4rem;
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  border: none;
+  width: 300px;
+  display: inline-block;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+button:hover,
+a.knap:hover {
+  background-color: #555555;
+}
+
+.forkert-farve {
+  color: #FF0000;
+}
+
+.korrekt-farve {
+  color: #00FF00;
+}
+
+.neutral-farve {
+  color: #FFFF00;
+}
+
+.margin-bottom {
+  margin-bottom: 2rem;
+}
+
+.negativ-margin {
+  margin-bottom: -2rem;
+}
+
+.hidden:not(:first-of-type) {
+  display: none;
+}
+
+.btn-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 768px) {
+  section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    height: 100vh;
+    margin: 0 20% 0 20%;
+  }
+}
+@media (min-width: 1024px) {
+  section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    height: 100vh;
+    margin: 0 20% 0 20%;
+  }
+  .talebobl {
+    background-color: #FFFFFF;
+    font-size: 2.8rem;
+    color: #131928;
+    padding: 1rem 3rem;
+    width: auto;
+    height: 75%;
+    max-width: 300px;
+    max-height: 100%;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}/*# sourceMappingURL=style.css.map */
